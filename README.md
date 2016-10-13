@@ -4,7 +4,7 @@ B.-K. Kim, H. Lee, J. Roh, and S.-Y. Lee (2015),
 "Hierarchical committee of deep cnns with exponentially-weighted decision fusion for static facial expression recognition."
 In Proceedings of the 2015 ACM on International Conference on Multimodal Interaction (pp. 427-434). ACM.
 
-======================================================
+------------------------------------------------------
 
 Folder1: lib1_AlignFace_NormalizeInput
 
@@ -25,20 +25,21 @@ Please download the following libraries and locate them to the correct folders
 (These days the IntraFace matlab codes are not found @ http://humansensing.cs.cmu.edu/intraface/download_functions_matlab.html
 Please contact IntraFace team for downloading "FacialFeatureDetection&Tracking_v1.4.0.zip")
 
---------------------------------------------------
+======================================================
 Folder2: lib2_TrainDeepCNN
 
 - codes used for training deep CNNs
   : based on MatConvNet toolbox (version1.0-beta8)
 
---------------------------------------------------
+======================================================
 Folder3: lib3_HierarchicalCommittee
 
 - codes used in formation of hierarchical committee of deep CNNs
   : single-level committee, two-level committee
 
 
-======================================================
+------------------------------------------------------
+
 Notice that due to memory and license issues, we cannot provide
 all databases (SFEW2.0 + external data (FER-2013, TFD)),
 all trained models (240 deep CNNs specified in our article),
