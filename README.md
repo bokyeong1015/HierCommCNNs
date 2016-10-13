@@ -5,7 +5,7 @@ B.-K. Kim, H. Lee, J. Roh, and S.-Y. Lee (2015),
 In Proceedings of the 2015 ACM on International Conference on Multimodal Interaction (pp. 427-434). ACM.
 
 ======================================================
-======================================================
+
 Folder1: lib1_AlignFace_NormalizeInput
 
 - codes used in face registration (multi-pipeline-based alignment)
@@ -37,7 +37,7 @@ Folder3: lib3_HierarchicalCommittee
 - codes used in formation of hierarchical committee of deep CNNs
   : single-level committee, two-level committee
 
-======================================================
+
 ======================================================
 Notice that due to memory and license issues, we cannot provide
 all databases (SFEW2.0 + external data (FER-2013, TFD)),
