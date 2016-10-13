@@ -40,13 +40,9 @@ Folder3: lib3_HierarchicalCommittee
 
 ------------------------------------------------------
 
-Notice that due to memory and license issues, we cannot provide
-all databases (SFEW2.0 + external data (FER-2013, TFD)),
-all trained models (240 deep CNNs specified in our article),
-and thus the complete codes for our work.
+Notice that due to memory and license issues, we cannot provide the databases (SFEW2.0 + external data (FER-2013, TFD)), the trained models (240 deep CNNs specified in our article), and thus the complete codes for our work.
 
 However, here we provide executable codes working on some sample data.
-If you get all databases, fully understand our codes, and properly modify these codes for working on whole data and for training whole deep CNNs,
-you can obtain experimental results presented in our work.
+If you get all databases, fully understand our codes, and properly modify these codes for working on whole data and for training whole deep CNNs, you can obtain experimental results presented in our work.
 
 If you have any query, please contact Bo-Kyeong Kim (bokyeong1015@gmail.com).
