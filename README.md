@@ -1,6 +1,6 @@
 # Hierarchical Committee of CNNs for Facial Expression Recognition
 
-This is the MATLAB codes for
+MatConvNet-based MATLAB implementation for
 
 * [Challenge] Winner of SFEW Part, The 3rd Emotion Recognition in the Wild Challenge ([EmotiW’15](https://cs.anu.edu.au/few/emotiw2015.html)), 2015
 * [Paper] "[Hierarchical Committee of Deep Convolutional Neural Networks for Robust Facial Expression Recognition](https://link.springer.com/article/10.1007/s12193-015-0209-0)," Journal on Multimodal User Interfaces (JMUI), 2016
