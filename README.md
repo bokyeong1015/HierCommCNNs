@@ -1,46 +1,60 @@
-# HierCommDeepCNNs_MATLAB_revised
-MATLAB codes for
-B.-K. Kim, H. Lee, J. Roh, and S.-Y. Lee (2015), 
-"Hierarchical committee of deep cnns with exponentially-weighted decision fusion for static facial expression recognition."
-In Proceedings of the 2015 ACM on International Conference on Multimodal Interaction (pp. 427-434). ACM.
+# Hierarchical Committee of CNNs for Facial Expression Recognition
 
-------------------------------------------------------
+This is the MATLAB codes for
 
-Folder1: lib1_AlignFace_NormalizeInput
+* [Challenge] Winner of SFEW Part, The 3rd Emotion Recognition in the Wild Challenge ([EmotiW’15](https://cs.anu.edu.au/few/emotiw2015.html)), 2015
+* [Paper] "[Hierarchical Committee of Deep Convolutional Neural Networks for Robust Facial Expression Recognition](https://link.springer.com/article/10.1007/s12193-015-0209-0)," Journal on Multimodal User Interfaces (JMUI), 2016
 
-- codes used in face registration (multi-pipeline-based alignment)
-- codes used for input normalization (illumination normalization, contrast enhancement)
-         + formation of input matrix (imdb) for MatConvNet toolbox 
-
-* Due to redistribution issues, we cannot provide some open-source codes used for our face registration. Please download the following libraries and locate them to the correct folders
-
-1) /pipeline_modules_functions/module1_ZR_FaceDetector
--  visit https://www.ics.uci.edu/~xzhu/face/ -> download and unzip "face-release1.0-basic.zip" -> move the files in "face-release1.0-basic.zip" to "module1_ZR_FaceDetector"
-	
-2) /pipeline_modules_functions/module3_INTRAFACE_LandmarkDetector
-- visit http://humansensing.cs.cmu.edu/intraface/download_functions_matlab.html -> download and unzip "FacialFeatureDetection&Tracking_v1.4.0.zip" -> move the files in "FacialFeatureDetection&Tracking_v1.4.0.zip" to "module3_INTRAFACE_LandmarkDetector"
-	
-(These days the IntraFace matlab codes '2)' are not found @ http://humansensing.cs.cmu.edu/intraface/download_functions_matlab.html
-Please contact IntraFace team for downloading "FacialFeatureDetection&Tracking_v1.4.0.zip")
-
-======================================================
-Folder2: lib2_TrainDeepCNN
-
-- codes used for training deep CNNs
-  : based on MatConvNet toolbox (version1.0-beta8)
-
-======================================================
-Folder3: lib3_HierarchicalCommittee
-
-- codes used in formation of hierarchical committee of deep CNNs
-  : single-level committee, two-level committee
+![fig_overview](fig_overview.png)
 
 
-------------------------------------------------------
+## 1. Input Pre-processing
 
-Notice that due to memory and license issues, we cannot provide the databases (SFEW2.0 + external data (FER-2013, TFD)), the trained models (240 deep CNNs specified in our article), and thus the complete codes for our work.
+* Forder `lib1_AlignFace_NormalizeInput` include
+  - codes for **face registration** (multi-pipeline-based alignment)
+  - codes for **input normalization** (illumination normalization, contrast enhancement) + **input matrix** (imdb) formation for MatConvNet toolbox 
+  - Download the following libraries for face registration
+    + `/pipeline_modules_functions/module1_ZR_FaceDetector`
+      + visit https://www.ics.uci.edu/~xzhu/face/ → download and unzip "face-release1.0-basic.zip" → move the unzipped files to "module1_ZR_FaceDetector"
+    + `/pipeline_modules_functions/module3_INTRAFACE_LandmarkDetector`
+      + visit http://humansensing.cs.cmu.edu/intraface/download_functions_matlab.html → download and unzip "FacialFeatureDetection&Tracking_v1.4.0.zip" → move the files to "module3_INTRAFACE_LandmarkDetector"
+ 
+## 2. Individual CNNs
 
-However, here we provide executable codes working on some sample data.
-If you get all databases, fully understand our codes, and properly modify these codes for working on whole data and for training whole deep CNNs, you can obtain experimental results presented in our work.
+* Forder `lib2_TrainDeepCNN` includes
+  - codes to train individual CNNs
+    + based on MatConvNet toolbox (version1.0-beta8)
 
-If you have any query, please contact Bo-Kyeong Kim (bokyeong1015@gmail.com).
+## 3. Hierarchical Committee (Ensemble) of CNNs
+
+* Forder `lib3_HierarchicalCommittee` includes
+  - codes to form hierarchical committee of CNNs
+    + single-level & two-level committees
+
+## Notice
+  - Due to memory and license issues, we cannot entirely provide the datasets (SFEW2.0, FER-2013, TFD) and all the trained models (240 CNNs) used in our paper.
+  - However, this repository includes executable codes for some sample data. We believe that you can obtain the results in our paper if you use full data and train whole models.
+
+## Citation
+If you plan to use our codes, please consider citing our paper:
+```
+@article{kim2016hierarchical,
+  title={Hierarchical committee of deep convolutional neural networks for robust facial expression recognition},
+  author={Kim, Bo-Kyeong and Roh, Jihyeon and Dong, Suh-Yeon and Lee, Soo-Young},
+  journal={Journal on Multimodal User Interfaces},
+  volume={10},
+  number={2},
+  pages={173--189},
+  year={2016},
+  publisher={Springer}
+}
+```  
+```  
+@inproceedings{kim2015hierarchical,
+  title={Hierarchical committee of deep cnns with exponentially-weighted decision fusion for static facial expression recognition},
+  author={Kim, Bo-Kyeong and Lee, Hwaran and Roh, Jihyeon and Lee, Soo-Young},
+  booktitle={Proceedings of the 2015 ACM on International Conference on Multimodal Interaction},
+  pages={427--434},
+  year={2015}
+}
+```  
